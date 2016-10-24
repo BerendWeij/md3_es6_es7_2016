@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d lib"
   },
-  "author": "Berend Weij",
+  "author": "Berend Weij, Abdelkarim Ouzzine en Artur Kupczak.",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.14.0",
