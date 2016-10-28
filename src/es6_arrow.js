@@ -29,11 +29,11 @@ var sayHello = (message, name) => {
 	//Complex voorbeeld
 	var deliveryBoy = {
 		name: "Berend",
-		handlemessage: function (message, handler) {
+		handleMessage: function (message, handler) {
 			handler(message);
 		},
 		receive: function (){
-			this.handlemessage ("Hello ", message => console.log(message + this.name))
+			this.handleMessage ("Hello ", message => console.log(message + this.name))
 		}
 		/* source: EggHead */
 	}
