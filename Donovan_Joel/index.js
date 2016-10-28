@@ -62,10 +62,10 @@ console.log(message7.length);  //78
 // Met string substitution kan je variables, functions, etc. toevoegen aan je string.
 // Als je iets toevoegd moet je het tussen ${ } plaatsen.
 
-var name = "joel";
+let name = "joel";
 console.log(`Ewa, ${name}!`);
 
-function fn() { return "ik ben een functie is een string!"; }
+function fn() { return "ik ben een functie in een string!"; }
 console.log(`${fn()}`);
 
 // Je kan de variabelen natuurlijk zo vaak als je wilt gebruiken ik een template string
@@ -74,18 +74,12 @@ console.log(`Mijn naam is ${name.toUpperCase()} en mijn moeder noemt mij ${name.
 
 //Je kan opsommingen toevoegen
 
-var a = 10;
-var b = 10;
+let a = 10;
+let b = 10;
 console.log(`JavaScript first appeared ${a+b} years ago. Crazy!`);
 
 // De ${} gaat goed samen met alle expressies en methodes
 
-var user = {name: 'Donovan Roubos'};
+let user = {name: 'Donovan Roubos'};
 console.log(`Dit is mijn naam in hoofdletters, ${user.name.toUpperCase()}.`);
-
-
-
-document.querySelector('.results').innerHTML = user.name;
-
-
 
