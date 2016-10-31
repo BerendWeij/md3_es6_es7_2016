@@ -1,0 +1,69 @@
+// !!NIEUWE MANIER -- Mitchell
+//////
+
+
+
+
+
+//Maak een nieuwe class aan. Dit is namelijk nieuw in deze JavaScript. Ik geef deze class de naam Calculator.
+
+    class Calculator {
+        constructor(number1, number2) {
+            //Lokale variable worden toegewezen. Deze kan in elke functie worden opgeroepen.
+            this.number1 = number1;
+            this.number2 = number2;
+        }
+
+        //Maak functie aan in de class. Ik heb gekozen voor de functie die een rekensom maakt.
+        calculateCountUp() {
+            var answer = this.number1 + this.number2;
+            return this.number1 + ' + ' + this.number2 + ' = ' + answer;
+        }
+
+        calculateCountDown(number1 = this.number1, number2 = this.number2) {
+            var answer = number1 - number2;
+            return number1 + ' - ' + number2 + ' = ' + answer;
+        }
+    }
+
+    //Hier roep ik de class op door 'new' ervoor te zetten. Ik geef hier al 2 getallen door.
+    var calc = new Calculator(5, 56);
+
+    //Ik zet de 'return' in de variable optellen. Omdat ik hierboven al 2 getallen heb opgegeven, is deze al bekend.
+    var optellen = calc.calculateCountUp();
+
+    //Hier roep ik een andere functie op. Ik zet mijn eigen waardes er weer in.
+    var aftrekken = calc.calculateCountDown(100, 45);
+
+
+    //Laat zien wat er uit komt
+    console.log(optellen); // 5 + 56 = 61
+    console.log(aftrekken); // 100 - 45 = 55
+
+
+
+
+
+
+// !!OUDE MANIER -- Cees
+//////
+
+    function Vehicle(make, year) {
+        Object.defineProperty(this, 'make', {
+            get: function() { return make; }
+        });
+
+        Object.defineProperty(this, 'year', {
+            get: function() { return year; }
+        });
+    }
+
+    Vehicle.prototype.toString = function() {
+        return this.make + ' ' + this.year;
+    }
+
+    var vehicle = new Vehicle('Toyota Corolla', 2009);
+
+    console.log(vehicle.make); // Toyota Corolla
+    vehicle.make = 'Ford Mustang';
+    console.log(vehicle.toString()) // Toyota Corolla 2009

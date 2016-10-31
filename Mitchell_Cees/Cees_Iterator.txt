@@ -1,0 +1,10 @@
+var myObj = {};
+new Map([[1,"a"],[2,"b"],[3,"c"]]).get(2);               // "b"
+new WeakMap([[{},"a"],[myObj,"b"],[{},"c"]]).get(myObj); // "b"
+new Set([1, 2, 3]).has(3);                               // true
+new Set("123").has("2");                                 // true
+new WeakSet(function*() {
+    yield {};
+    yield myObj;
+    yield {};
+}()).has(myObj);                                         // true
