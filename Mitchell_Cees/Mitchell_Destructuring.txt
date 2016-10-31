@@ -1,0 +1,278 @@
+
+
+
+
+
+
+
+
+
+
+
+
+//////Destructuring///////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Je maakt een object aan. In dit object staat de naam, leeftijd en de schoenmaat.
+
+    //maak een object
+    let arie = {
+        naam: 'Arie',
+        leeftijd: 21,
+        schoenmaat: 57,
+        geboortedatum: {
+            dag: 1,
+            maand: 4,
+            jaar: 1932
+        }
+    };
+
+    //wijs deze toe aan de variables
+    let { naam: naamArie, leeftijd: leeftijdArie, geboortedatum: {jaar: geboorteJaar} } = arie;
+
+//let {dag: geboorteDag} = persoon.geboortedatum, {jaar: geboorteJaar} = persoon.geboortedatum;
+
+
+//NIEUW
+
+    //console dit
+    console.log(naamArie); //Arie
+    console.log(leeftijdArie); //21
+    console.log(geboorteJaar); //1932
+
+
+//////
+
+//OUD
+
+    //console dit
+    console.log(arie.naam); //Arie
+    console.log(arie.leeftijd); //21
+    console.log(arie.geboortedatum.jaar); //1932
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////NIEUW
+
+    //maak lege variable aan
+    var a, b, rest;
+
+    //wijs dit toe aan de variables
+    [a, , ...rest] = [1, 2, 3, 4, 5];
+
+    //console dit
+    console.log(a); // 1
+    console.log(b); //
+    console.log(rest); // [3, 4, 5]
+
+
+
+
+
+/////OUD
+
+
+
+    //maak lege variable aan
+    var a, b, rest, array;
+
+    //vul de array
+    array = [1, 2, 3, 4, 5];
+
+    //wijs dit toe aan de variables
+    a = array[0];
+    b = array[1];
+
+    //console dit
+    console.log(a); //1
+    console.log(b); //2
+    console.log(rest); //Kan niet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///NIEUW
+
+    //maak lege variable aan
+    var a, b;
+
+    //voeg een getal aan een variable
+
+    a = 1;
+    b = 3;
+
+    //verander de inhoud van de variables door deze om te wisselen
+    [a, b] = [b, a];
+
+    //console dit
+    console.log(a); // 3
+    console.log(b); // 1
+
+
+
+
+
+/////OUD
+
+
+    //maak lege variable aan
+    var a, b;
+
+    //voeg een getal aan een variable
+
+    a = 1;
+    b = 3;
+
+    //verander de inhoud van de variables door deze om te wisselen
+    a = b;
+    b = a;
+
+    //console dit
+    console.log(a); // 3
+    console.log(b); // 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////WERKEND VOORBEELD
+
+    //Voeg tekst toe aan variable fullname
+    var fullName = 'Arie van Bonbarie';
+
+    //haal deze tekst los van elkaar d.m.v. de spatie
+    var [first, , ] = fullName.split(' ');
+
+    //console dit
+    console.log(first); //Arie
+    console.log(tussen); //van
+    console.log(last); //Bonbarie
+
+
+
+    //Voeg tekst toe aan variable fullname
+    var fullName = 'Arie Bonbarie';
+
+    //haal deze tekst los van elkaar d.m.v. de spatie
+    var [first, last] = fullName.split(' ');
+
+    //Wissel de inhoud van de variable om
+    var [last, first] = [first, last];
+
+    //console dit
+    console.log(first); //Bonbarie
+    console.log(last); //Arie
