@@ -1,0 +1,7 @@
+kahoot vraag:
+
+welke van de volgende functies zorgt er voor dat de overige variabele ook worden weergegeven:
+
+a default
+b rest
+c spread
